@@ -220,25 +220,18 @@ src/main/java
 
 # API Endpoints
 
-| Method | Endpoint                     | Description |
-| ------ | ---------------------------- | ----------- |
-| POST   | /api/posts                   | Create post |
-| POST   | /api/posts/{postId}/comments | Add comment |
-| POST   | /api/posts/{postId}/like     | Like post   |
+Method  Endpoint                     Description 
 
----
-
-# Setup Instructions
+POST    /api/posts                   Create post 
+POST    /api/posts/{postId}/comments Add comment 
+POST    /api/posts/{postId}/like     Like post   
 
 ## 1. Clone Repository
 
 ```bash
 git clone <your-github-link>
-```
 
----
-
-## 2. Configure MySQL
+ 2. Configure MySQL
 
 Update:
 
@@ -248,10 +241,10 @@ application.properties
 
 Example:
 
-```properties
+properties
 spring.datasource.url=jdbc:mysql://localhost:3306/guardrails
 spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.datasource.password=Root
 ```
 
 ---
@@ -270,13 +263,6 @@ Run:
 
 ```text
 GuardrailsApplication.java
-```
-
----
-
-# Redis Commands Used
-
-## Check Virality
 
 ```bash
 GET post:1:virality_score
@@ -298,9 +284,6 @@ FLUSHALL
 
 ```bash
 KEYS *
-```
-
----
 
 # Future Improvements
 
